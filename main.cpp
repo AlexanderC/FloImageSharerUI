@@ -11,12 +11,12 @@ int main(int argc, char *argv[])
 
     QDir d;
     QString settingsFile = d.absolutePath() + QString("/settings.ini");
-    QString binaryFile = d.absolutePath() + QString("/sharer");
+    QString binaryFile = d.absolutePath() + QString("/bin/FloImageSharerDaemon");
 
     qDebug() << "Working Path: " << d.absolutePath();
 
     Configurator* configurator = new Configurator(settingsFile);
-    Runtime* runtime = new Runtime(binaryFile, d.absolutePath());
+    Runtime* runtime = new Runtime(binaryFile, d.absolutePath() + QString("/logs"));
 
     for(auto & path: configurator->getPaths()) {
         runtime->createAddInstance(configurator->getUrl(), path);

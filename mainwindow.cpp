@@ -84,7 +84,7 @@ void MainWindow::on_pathsList_itemPressed(QListWidgetItem *item)
 {
       QMessageBox::StandardButton reply;
       reply = QMessageBox::question(this, "Please Confirm", "Do you realy want to stop sharing this folder? (needs restart)",
-                                    QMessageBox::Yes|QMessageBox::No);
+                                    QMessageBox::Yes | QMessageBox::No);
       if (reply == QMessageBox::Yes) {
             QString path = item->text();
 
