@@ -30,7 +30,7 @@
      </sizepolicy>
     </property>
     <property name="inputMethodHints">
-     <set>Qt::ImhUrlCharactersOnly</set>
+     <set>Qt::ImhNone</set>
     </property>
     <property name="placeholderText">
      <string>Service URL</string>

@@ -8,6 +8,7 @@
 #include <vector>
 #include "configurator.h"
 #include "runtime.h"
+#include "exceptions.h"
 
 namespace Ui {
 class MainWindow;

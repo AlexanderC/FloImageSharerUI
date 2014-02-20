@@ -5,7 +5,7 @@ Configurator::Configurator(QString path)
     this->settings = new QSettings(path, QSettings::IniFormat);
 
     if(!this->settings->isWritable()) {
-        throw "Settings file is locked!";
+        throw new SettingsFileLockedException();
     }
 
     this->setUrl(this->settings->value("url").toString());

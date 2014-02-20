@@ -5,6 +5,7 @@
 #include <vector>
 #include <QString>
 #include <QSettings>
+#include "exceptions.h"
 
 using namespace std;
 

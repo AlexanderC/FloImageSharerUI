@@ -8,6 +8,7 @@
 #include <QProcess>
 #include <QDebug>
 #include <QDate>
+#include "exceptions.h"
 
 using namespace std;
 

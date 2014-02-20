@@ -1,6 +1,7 @@
 #include <QApplication>
 #include <QDebug>
 
+#include "exceptions.h"
 #include "mainwindow.h"
 #include "configurator.h"
 #include "runtime.h"
@@ -11,7 +12,11 @@ int main(int argc, char *argv[])
 
     QDir d;
     QString settingsFile = d.absolutePath() + QString("/settings.ini");
+#ifdef _WIN32
+    QString binaryFile = d.absolutePath() + QString("/bin/FloImageSharerDaemon.exe");
+#else
     QString binaryFile = d.absolutePath() + QString("/bin/FloImageSharerDaemon");
+#endif
 
     qDebug() << "Working Path: " << d.absolutePath();
 

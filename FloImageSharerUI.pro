@@ -19,7 +19,8 @@ SOURCES += main.cpp\
 
 HEADERS  += mainwindow.h \
     configurator.h \
-    runtime.h
+    runtime.h \
+    exceptions.h
 
 FORMS    += mainwindow.ui
 
